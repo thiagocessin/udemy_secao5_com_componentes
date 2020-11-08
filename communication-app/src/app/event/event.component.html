@@ -1,0 +1,17 @@
+<mat-card>
+
+  <mat-card-content>
+    <section>
+
+      <h3>Value:{{value}}</h3>
+      <!--eventos emitidos pelo componente filho plusOne,two...-->
+      <app-child-item 
+        [title]="title"
+        (inc)="incBy($event)">
+      
+      </app-child-item>
+    </section>
+
+  </mat-card-content>
+
+</mat-card>
