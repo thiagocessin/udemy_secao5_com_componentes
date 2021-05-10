@@ -7,9 +7,38 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TimerComponent implements OnInit {
 
+  miliseconds: number = 0;
+  interval:any;
+  running = false;
   constructor() { }
-
+  
   ngOnInit() {
+  }
+
+
+  start(){
+    if(!this.running){
+      //chama a cada 50 ms
+       this.interval = setInterval(()=>{
+          this.miliseconds+=50;
+      },50);
+      this.running = true;
+    }
+  }
+
+  stop(){
+    if(this.running){
+      clearInterval(this.interval);
+      this.running = false;
+    }
+  }
+
+  clear(){
+    this.miliseconds = 0;
+  }
+
+  round(n:number) : number{
+    return Math.round(n);
   }
 
 }

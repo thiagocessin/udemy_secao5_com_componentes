@@ -4,14 +4,6 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import {
-  MatCardModule,
-  MatButtonModule,
-  MatIconModule,
-  MatFormFieldModule,
-  MatInputModule,
-  MatProgressBarModule,
-} from "@angular/material";
 import { FormsModule } from '@angular/forms';
 import { InputBindingComponent } from './input-binding/input-binding.component';
 import { ClientComponent } from './input-binding/client/client.component';
@@ -21,6 +13,18 @@ import { ClientsComponent } from './clients/clients.component';
 import { ItemClientsComponent } from './clients/item-clients/item-clients.component';
 import { ParentChildComponent } from './parent-child/parent-child.component';
 import { TimerComponent } from './parent-child/timer/timer.component';
+import { OnChangesComponent } from './on-changes/on-changes.component';
+import { NameChangesComponent } from './on-changes/name-changes/name-changes.component';
+import { InterceptingComponent } from './intercepting/intercepting.component';
+import { NameComponent } from './intercepting/name/name.component';
+import { MaterialModule } from './material.module';
+import { MainLifecycleComponent } from './main-lifecycle/main-lifecycle.component';
+import { LifecycleChildComponent } from './main-life-cycle/lifecycle-child/lifecycle-child.component';
+import { ChildChildComponent } from './main-life-cycle/lifecycle-child/child-child/child-child.component';
+import { CheckComponent } from './check/check.component';
+import { CheckChildComponent } from './check/check-child/check-child.component';
+import { Module1Module } from './module1/module1.module';
+import { Module2Module } from './module2/module2.module';
 
 
 @NgModule({
@@ -34,17 +38,23 @@ import { TimerComponent } from './parent-child/timer/timer.component';
     ItemClientsComponent,
     ParentChildComponent,
     TimerComponent,
+    OnChangesComponent,
+    NameChangesComponent,
+    InterceptingComponent,
+    NameComponent,
+    MainLifecycleComponent,
+    LifecycleChildComponent,
+    ChildChildComponent,
+    CheckComponent,
+    CheckChildComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
-    MatCardModule,
-    MatButtonModule,
-    MatIconModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatProgressBarModule,
+    MaterialModule,
+    Module1Module,
+    Module2Module
   
   ],
   providers: [],
